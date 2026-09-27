@@ -1,0 +1,199 @@
+/* --- Globale Stile --- */
+:root {
+    --bg-color: #f7f3ed; /* Neutrales, warmes Creme-Beige */
+    --text-color: #3e332a; /* Dunkles Braun-Grau */
+    --accent-color: #a82e1c; /* Rostrot (von den Blumen) */
+    --highlight-color: #d8b273; /* Gealtertes Gold/Messing */
+    --main-font: 'Montserrat', sans-serif;
+    --serif-font: 'Crimson Text', serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--main-font);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1, h2, h3 {
+    font-family: var(--serif-font);
+    font-weight: 600;
+}
+
+/* --- Header Stile --- */
+header {
+    background-color: #e5dfd3;
+    padding: 40px 0;
+    margin-bottom: 40px;
+    border-bottom: 3px solid var(--highlight-color);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.header-image-wrapper {
+    flex: 0 0 45%;
+}
+
+.header-image {
+    max-width: 100%;
+    height: auto;
+    border: 10px solid #ede3d3; /* Hellerer Rahmen um das Holzbild */
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.1);
+}
+
+.header-text {
+    flex: 1;
+}
+
+.header-text h1 {
+    font-size: 2.8rem;
+    margin: 0 0 10px 0;
+    line-height: 1.2;
+}
+
+.header-text h1 span {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.header-text p {
+    font-size: 1.1rem;
+    color: #5a4c3f;
+    margin-top: 15px;
+}
+
+.provenance-note {
+    background-color: #ede3d3;
+    padding: 12px 18px;
+    border-left: 4px solid var(--accent-color);
+    border-radius: 0 6px 6px 0;
+    margin-top: 20px !important;
+    font-size: 1rem !important;
+    color: var(--text-color) !important;
+}
+
+/* --- Main Content Stile --- */
+main {
+    margin-bottom: 60px;
+}
+
+.intro-history h2, .details-section h2 {
+    color: var(--accent-color);
+    border-bottom: 2px solid var(--highlight-color);
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.intro-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.history-card {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    border-top: 5px solid var(--accent-color);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.05);
+}
+
+.history-card h3 {
+    margin-top: 0;
+    color: #4a3e34;
+}
+
+.details-section {
+    margin-top: 50px;
+    background-color: rgba(216, 178, 115, 0.15); /* Sehr feine Tönung */
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.details-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.details-section li {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 25px;
+}
+
+.details-section li:before {
+    content: "•";
+    color: var(--accent-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+/* --- Footer Stile --- */
+footer {
+    background-color: #4a3e34; /* Dunklerer Neutralton für Kontrast */
+    color: #f7f3ed;
+    padding: 50px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.imprint h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+    color: var(--highlight-color);
+}
+
+.legal-notice {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #d1c8bb;
+}
+
+.legal-notice p {
+    margin: 5px 0;
+}
+
+/* --- Responsive Anpassungen (Mobil) --- */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-image-wrapper {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
+
+    .intro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .legal-notice {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
